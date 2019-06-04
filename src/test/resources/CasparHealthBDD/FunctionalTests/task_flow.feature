@@ -3,7 +3,7 @@ Feature: Display of Terms and Conditions and Release of Medical Information on f
   
 
   Scenario: Creating new patient from therapist dashboard, logging in with new credentials and checking terms of service on first login
-    Given  Navigate to { login_page_link }
+    Given  Navigate to { page_link }
     And Login with the following user credentials { casparID } and { password }
     When Click “Add patient” and create a new patient
     And Use the login credentials of the patient

@@ -1,17 +1,22 @@
 package CasparHealthBDD;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Stepdefs {
-	@Given("Navigate to \\{ login_page_link }")
-	public void navigate_to() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new cucumber.api.PendingException();
+	
+	private final WebDriver driver = new FirefoxDriver();
+	
+	@Given("Navigate to \\{page_link}")
+	public void navigate_to(String page_link) {
+		driver.get(page_link);
 	}
 
-	@Given("Login with the following user credentials \\{ casparID } and \\{ password }")
+	@Given("Login with the following user credentials \\{casparID} and \\{password}")
 	public void login_with_the_following_user_credentials_and() {
 		// Write code here that turns the phrase above into concrete actions
 		throw new cucumber.api.PendingException();
